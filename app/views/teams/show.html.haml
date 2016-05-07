@@ -1,0 +1,24 @@
+.panel.panel-default
+  .panel-heading
+    「#{@team.name}」チームのメンバー一覧
+  %table.table
+    %tr
+      %th ユーザ名
+    - @team.participations.each do |participation|
+      %tr
+        %td= participation.user.name
+
+.panel.panel-default
+  .panel-heading
+    新しくメンバーを招待する
+  .panel-body
+    = simple_form_for @user, url: invite_team_path(@team) do |f|
+      .form-group
+        = f.input :email, label: 'メールアドレス', input_html: { class: 'fit-input' }
+      .form-group
+        = f.button :submit, class: 'btn btn-primary'
+
+%br
+= link_to '編集', edit_team_path(@team)
+\|
+= link_to '戻る', teams_path

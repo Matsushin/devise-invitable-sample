@@ -1,0 +1,11 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container-full
+    .navbar-header
+      .navbar-brand
+        = link_to 'devise_invitable サンプル', root_path
+    #main-navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav.pull-right
+        - if user_signed_in?
+          %li
+            %a= current_user.name
+          %li= link_to 'ログアウト', destroy_user_session_path, method: :delete

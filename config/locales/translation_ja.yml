@@ -1,0 +1,34 @@
+ja:
+  activerecord:
+    models:
+      chapter: chapter  #g
+      company: company  #g
+      course: course  #g
+      progress: progress  #g
+      user: user  #g
+
+    attributes:
+      team:
+        name: チーム名
+
+      user:
+        company: 企業
+        current_sign_in_at: current_sign_in_at  #g
+        current_sign_in_ip: current_sign_in_ip  #g
+        email: メールアドレス  #g
+        encrypted_password: encrypted_password  #g
+        last_sign_in_at: last_sign_in_at  #g
+        last_sign_in_ip: last_sign_in_ip  #g
+        progresses: progresses  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
+        teams: teams  #g
+        user_type: 種別
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: パスワード(確認)
+        remember_me: 次回からパスワードを省く
+        name: 名前
+    errors:
+      messages:

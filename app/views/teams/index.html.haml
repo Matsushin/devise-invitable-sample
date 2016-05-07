@@ -1,0 +1,23 @@
+= link_to new_team_path, class: 'btn btn-primary pull-right' do
+  = fa_icon('plus')
+  新しいチームを作る
+%br
+%br
+.panel.panel-default
+  .panel-heading
+    チーム一覧
+  %table.table
+    %thead
+      %tr
+        %th 名前
+        %th
+        %th
+        %th
+
+    %tbody
+      - @teams.each do |team|
+        %tr
+          %td= team.name
+          %td= link_to 'メンバー一覧', team
+          %td= link_to '編集', edit_team_path(team)
+          %td= link_to '削除', team, :method => :delete, :data => { :confirm => '本当に削除しますか？' }
